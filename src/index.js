@@ -1,4 +1,4 @@
-import toto from './toto.png';
+import toto from './assets/img/toto.png';
 
 import './index.scss';
 
