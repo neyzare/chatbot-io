@@ -6,6 +6,7 @@ body{
 
 h1 {
   color: #ffff;
+  margin: 0;
 }
 
 nav{
@@ -14,7 +15,7 @@ nav{
 
 .bot-list{
   background: url("./assets/img/circuits.png") no-repeat center;
-  height: 75vh;
+  height: 87vh;
 }
 
 .border-end{
@@ -33,10 +34,13 @@ nav{
 
 .chat{
   height: 85vh;
+  padding: 0 !important;
 }
 
 .chat-window{
-  height: 75vh;
+  height: 80vh;
+  scrollbar-width: thin;
+  scrollbar-color: #0594d0 #ffff;
 }
 
 .card{
@@ -50,4 +54,8 @@ nav{
 .user-message{
   background-color: #04BBFF;
   color: #ffff;
+}
+
+.user-footer{
+  color: #ffff !important;
 }
