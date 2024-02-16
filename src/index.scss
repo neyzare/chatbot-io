@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+body{
+  font-family: "Share Tech", sans-serif;
+}
+
 h1 {
   color: #ffff;
 }
@@ -9,10 +13,41 @@ nav{
 }
 
 .bot-list{
-  background: url('assets/img/circuits.png') cover;
+  background: url("./assets/img/circuits.png") no-repeat center;
   height: 75vh;
 }
 
+.border-end{
+  border-color: #0594D0 !important;
+}
+
+.border{
+  border-color: #0594D0 !important;
+}
+
+.list-group-item{
+  background-color: #04BBFF;
+  border-color: #0594D0 !important;
+  color: #ffff;
+}
+
 .chat{
-  height: 100vh;
+  height: 85vh;
+}
+
+.chat-window{
+  height: 75vh;
+}
+
+.card{
+  border: #0594D0 solid 3px;
+}
+
+.card-header{
+  border-bottom: #0594D0 solid 3px;
+}
+
+.user-message{
+  background-color: #04BBFF;
+  color: #ffff;
 }
