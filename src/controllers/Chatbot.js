@@ -1,5 +1,6 @@
 import viewNav from '../views/nav';
 import viewListBots from '../views/chatbot/list-bots';
+import viewMessages from '../views/chatbot/messages';
 
 const ChatBot = class {
   constructor() {
@@ -14,6 +15,7 @@ const ChatBot = class {
       <div class="container">
         <div class="row">
           ${viewListBots()}
+          ${viewMessages()}
         </div>
       </div>
     `);
