@@ -1,4 +1,5 @@
 import viewNav from '../views/nav';
+import viewListBots from '../views/chatbot/list-bots';
 
 const ChatBot = class {
   constructor() {
@@ -8,16 +9,18 @@ const ChatBot = class {
   }
 
   render() {
-    return `
-    ${viewNav()}
-    <div class="container">
-      <div class="row">Toto</div>
-    </div>
-    `;
+    return (`
+      ${viewNav()}
+      <div class="container">
+        <div class="row">
+          ${viewListBots()}
+        </div>
+      </div>
+    `);
   }
 
   run() {
-    this.el.innerhtml = this.render();
+    this.el.innerHTML = this.render();
   }
 };
 
