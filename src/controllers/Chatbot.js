@@ -1,6 +1,6 @@
 import viewNav from '../views/nav';
 import viewListBots from '../views/chatbot/list-bots';
-import viewMessages from '../views/chatbot/messages';
+import viewMessages from '../views/chatbot/list-messages';
 
 const ChatBot = class {
   constructor() {

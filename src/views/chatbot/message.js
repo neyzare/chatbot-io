@@ -1,10 +1,12 @@
+import user from '../../assets/img/full-user.png';
+
 export default () => (`
 <div class="row mb-4">
   <div class="col-6"></div>
   <div class="col-6">
     <div class="card user-message">
       <div class="card-header">
-        <img src="https://www.citypng.com/public/uploads/preview/hd-man-user-illustration-icon-transparent-png-11640168385tqosatnrny.png" alt="User" width="30" height="30" class="border border-2 rounded-circle">
+        <img src=${user} alt="User" width="30" height="30" class="border bg-light border-2 rounded-circle">
         ME
       </div>
       <div class="card-body bg-dark">
