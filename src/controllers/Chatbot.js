@@ -1,5 +1,7 @@
 import viewNav from '../views/nav';
+
 import viewListBots from '../views/chatbot/list-bots';
+
 import viewMessages from '../views/chatbot/list-messages';
 
 const ChatBot = class {
@@ -9,13 +11,27 @@ const ChatBot = class {
     this.run();
   }
 
+  writeMessage() {
+    const elInputMessage = document.querySelector('.form-control');
+    const elViewMessage = document.querySelector('.chat-window');
+  }
+
+  onKeyPressInputMessage() {
+    const elInputMessage = document.querySelector('.form-control');
+    const elViewMessage = document.querySelector('.chat-window');
+    
+    elInputMessage.addEventListener('keydown', (e) => {
+
+    });
+  }
+
   render() {
     return (`
       ${viewNav()}
       <div class="container">
         <div class="row">
           ${viewListBots()}
-          ${viewMessages()}
+          ${viewMessages(this.data)}
         </div>
       </div>
     `);
@@ -23,6 +39,7 @@ const ChatBot = class {
 
   run() {
     this.el.innerHTML = this.render();
+    this.onKeyPress();
   }
 };
 

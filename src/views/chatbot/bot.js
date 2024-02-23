@@ -1,4 +1,4 @@
-import bot from '../../assets/img/Bot_1.png';
+import bot from '../../assets/img/bot.png';
 
 export default () => (`
 <li class="list-group-item d-flex border rounded-2 border-3 shadow justify-content-between align-items-center mb-2">
