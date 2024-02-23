@@ -1,9 +1,9 @@
 import viewMessage from './message';
 
-export default (data) => (`
+export default () => (`
   <div class="col-9 chat">
     <div class="container-fluid overflow-auto chat-window">
-      ${data.map((message) => viewMessage(message)).join('')}
+      ${viewMessage()}
     </div>
     <div class="input-group fixed mt-3 ms-4 pe-5">
       <input type="text" class="form-control border border-3 rounded me-2" placeholder="/Type your message" aria-label="Message" aria-describedby="button-addon2">

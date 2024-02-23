@@ -11,15 +11,9 @@ const ChatBot = class {
     this.run();
   }
 
-  writeMessage() {
-    const elInputMessage = document.querySelector('.form-control');
-    const elViewMessage = document.querySelector('.chat-window');
-  }
-
   onKeyPressInputMessage() {
     const elInputMessage = document.querySelector('.form-control');
     const elViewMessage = document.querySelector('.chat-window');
-    
     elInputMessage.addEventListener('keydown', (e) => {
 
     });
@@ -31,7 +25,7 @@ const ChatBot = class {
       <div class="container">
         <div class="row">
           ${viewListBots()}
-          ${viewMessages(this.data)}
+          ${viewMessages()}
         </div>
       </div>
     `);
