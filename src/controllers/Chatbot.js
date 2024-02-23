@@ -4,6 +4,8 @@ import viewListBots from '../views/chatbot/list-bots';
 
 import viewMessages from '../views/chatbot/list-messages';
 
+import textMessage from '../views/chatbot/message';
+
 const ChatBot = class {
   constructor() {
     this.el = document.querySelector('#root');

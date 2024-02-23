@@ -1,4 +1,3 @@
-
 export default class ChatApp {
   constructor() {
     // Sélectionnez les éléments du DOM nécessaires
