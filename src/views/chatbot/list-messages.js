@@ -16,7 +16,7 @@ export default () => {
     
     inputElement.value = '';
 
-    if (messageText === 'Bonjour') {
+    if (messageText === 'bonjour' || messageText === 'Bonjour') {
       const reponseBot =  'Bonjour Maitre '
       const messageBot = viewMessage('bot', reponseBot, new Date().toLocaleString())
 

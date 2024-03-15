@@ -1,14 +1,13 @@
 import viewNav from '../views/nav';
-
 import viewListBots from '../views/chatbot/list-bots';
-
 import viewMessages from '../views/chatbot/list-messages';
-
 import textMessage from '../views/chatbot/message';
+import WeatherService from './Meteo';
 
 const ChatBot = class {
   constructor() {
     this.el = document.querySelector('#root');
+    this.weatherService = new WeatherService();
 
     this.run();
   }
