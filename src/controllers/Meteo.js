@@ -1,28 +1,29 @@
 class WeatherService {
   constructor() {
-    this.url = 'https://ai-weather-by-meteosource.p.rapidapi.com/find_places?text=fishermans%20wharf&language=en';
+    this.baseUrl = 'https://ai-weather-by-meteosource.p.rapidapi.com';
+    this.apiKey = 'dbf0920287mshc50df06692353f5p127b1bjsn653dd4996129';
+    this.host = 'ai-weather-by-meteosource.p.rapidapi.com';
     this.options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': 'dbf0920287mshc50df06692353f5p127b1bjsn653dd4996129',
-        'X-RapidAPI-Host': 'ai-weather-by-meteosource.p.rapidapi.com'
+        'X-RapidAPI-Key': this.apiKey,
+        'X-RapidAPI-Host': this.host
       }
     };
   }
 
-  async fetchWeather() {
+  async fetchWeather(cityName) {
     try {
-      const response = await fetch(this.url, this.options);
-      const result = await response.text();
-      console.log(result);
+      const encodedCityName = encodeURIComponent(cityName);
+      const url = `${this.baseUrl}/find_places?text=${encodedCityName}&language=en`;
+      const response = await fetch(url, this.options);
+      const result = await response.json();
+      return result; // Return weather data
     } catch (error) {
-      console.error(error);
+      console.error(error); // Log the error
+      return null; // Return null in case of error
     }
   }
 }
 
-// Example usage:
-const weatherService = new WeatherService();
-weatherService.fetchWeather();
-
-export default weatherService;
+export default WeatherService;
